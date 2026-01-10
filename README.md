@@ -1,8 +1,8 @@
-#  Real-Time YouTube Object Detector 
+#  Real-Time Object Detector 
 
 The full video demonstration could not be hosted directly in this repository due to GitHub's **100MB file size limit**.
 
-Below is a screenshot of the detection in action.
+Below is a screenshot of the detection in action on this youtube video: https://www.youtube.com/watch?v=ddPnEk90vLk
 
 <img width="858" height="479" alt="Screenshot 2026-01-09 at 17 54 29" src="https://github.com/user-attachments/assets/b81615f3-1c86-46df-8e36-f3113769ec44" />
 
