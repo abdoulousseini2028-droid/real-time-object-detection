@@ -1,5 +1,4 @@
-# 🚀 Real-Time YouTube Object Detector (YOLOv5)
-A high-performance real-time object detection system that processes YouTube streams using YOLOv5 and `yt-dlp`. 
+#  Real-Time YouTube Object Detector 
 
 The full video demonstration could not be hosted directly in this repository due to GitHub's **100MB file size limit**.
 
