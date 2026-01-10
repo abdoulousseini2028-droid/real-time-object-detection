@@ -11,5 +11,17 @@ A high-performance real-time object detection system that processes YouTube stre
 ## 🚀 Quick Start
 ### 1. Clone the repo
 ```bash
-git clone github.com
+git clone https://github.com/abdoulousseini2028-droid/real-time-object-detection
 cd yolo_detection
+
+# Install dependencies
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+dependencies: ultralytics/yolov5: Core detection model
+yt-dlp: Stream extraction
+opencv-python
+
+# Run
+python main.py
