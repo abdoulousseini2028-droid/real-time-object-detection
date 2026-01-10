@@ -5,7 +5,7 @@ import numpy as np
 
 class ObjectDetection:
     def __init__(self, youtube_url, out_file="github_demo.mp4"):
-        # 1. Define URL and Load Model
+        # Defines URL and Load Model
         self.url = youtube_url
         self.out_file = out_file
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -14,7 +14,7 @@ class ObjectDetection:
         print(f"Using device: {self.device}")
 
     def load_model(self):
-        # 2026 Update: force_reload=False to use cache, .to(device) for speed
+        # force_reload=False to use cache, .to(device) for speed
         model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
         model.to(self.device)
         return model
@@ -27,7 +27,7 @@ class ObjectDetection:
             return cv2.VideoCapture(info['url'])
 
     def score_frame(self, frame):
-        # Perform detection
+        # Performs detection
         results = self.model(frame)
         labels, cord = results.xyxyn[0][:, -1], results.xyxyn[0][:, :-1]
         return labels, cord
@@ -53,7 +53,7 @@ class ObjectDetection:
         cap = self.get_video_stream()
         
         # --- SAFE VIDEO WRITER INITIALIZATION ---
-        # Read the first frame to get EXACT pixel dimensions
+        # Reads the first frame to get EXACT pixel dimensions
         ret, frame = cap.read()
         if not ret:
             print("Error: Could not access video stream.")
@@ -86,14 +86,13 @@ class ObjectDetection:
         
         # --- CLEANUP ---
         cap.release()
-        out.release() # CRITICAL: This saves the file to disk
+        out.release() # saves the file to disk
         cv2.destroyAllWindows()
         print(f"\nSuccessfully saved: {self.out_file}")
 
-# --- RUN THE APP ---
+# --- RUNNING ---
 if __name__ == "__main__":
-    # You can change this link to any YouTube video
-    youtube_link = "https://www.youtube.com/watch?v=ddPnEk90vLk" 
+    youtube_link = "https://www.youtube.com/watch?v=ddPnEk90vLk" #random short youtube video
     
     # Initialize and run
     detector_instance = ObjectDetection(youtube_link, out_file="github_demo.mp4")
