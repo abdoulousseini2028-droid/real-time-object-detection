@@ -7,10 +7,7 @@ Below is a screenshot of the detection in action:
 <img width="858" height="479" alt="Screenshot 2026-01-09 at 17 54 29" src="https://github.com/user-attachments/assets/b81615f3-1c86-46df-8e36-f3113769ec44" />
 
 
-##  Features
-- **Real-Time Stream Processing:** Extracts YouTube frames directly without downloading.
-- **YOLOv5 Inference:** Optimized for both CPU and CUDA-enabled GPUs.
-- **Automated Recording:** Automatically saves processed footage for analysis.
+VIDEO I USED: https://www.youtube.com/watch?v=ddPnEk90vLk
 
 ## Quick Start
 ### 1. Clone the repo
